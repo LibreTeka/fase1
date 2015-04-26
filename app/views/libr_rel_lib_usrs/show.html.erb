@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Libr libro:</strong>
+  <%= @libr_rel_lib_usr.libr_libro_id %>
+</p>
+
+<p>
+  <strong>Libr usuario:</strong>
+  <%= @libr_rel_lib_usr.libr_usuario_id %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @libr_rel_lib_usr.ubicacion %>
+</p>
+
+<p>
+  <strong>Otro:</strong>
+  <%= @libr_rel_lib_usr.otro %>
+</p>
+
+<%= link_to 'Edit', edit_libr_rel_lib_usr_path(@libr_rel_lib_usr) %> |
+<%= link_to 'Back', libr_rel_lib_usrs_path %>

@@ -1,0 +1,79 @@
+<body>
+
+<div id="cabecera">
+
+	<div id="cabsup">
+		<div id="logo">
+			<br>
+		<IMG SRC="logo.png" ALT="La primera biblioteca física p2p" WIDTH=300 HEIGHT=100% >
+
+		</div>
+
+		<div id="login">
+		<br>
+		<%= link_to 'Accede a tu cuenta', login_path %>
+		<%= link_to 'Regístrate', new_libr_usuario_path %>
+		</div>
+	</div>
+
+
+	<div id="menu">
+
+	 <ul>
+	    <li><%= link_to 'Inicio', root_path %></li>
+	    <li><%= link_to '¿Cómo funciona?', funcionamiento_path %></li>
+	    <li><%= link_to 'Preguntas Frecuentes', preguntas_path %></li>
+	    <li><%= link_to 'Nuestros principios', principios_path %></li>
+	    <li><%= link_to 'Contacto', contacto_path %></li>
+	 </ul>
+
+	</div>
+
+</div>
+<br>
+<br>
+<br>
+<div id="principal">
+
+	<div id="princip_izda">
+	<center>
+    <IMG SRC="owl-158417.png" ALT="La primera biblioteca física p2p"
+     WIDTH=278 HEIGHT=100% ALIGN=middl>
+     </center>
+	</div>
+
+
+
+
+	<div id="princip_dcha">
+
+<h1>Funcionamiento</h1>
+<br>
+
+Se trata de una red de gestión de préstamos entre la gente que tienes a tu alrededor. Ya sea para intercambiar objetos con tus amigos o para prestar a los vecinos de tu barrio, pueblo, o con quien tu selecciones que deseas compartir cada objeto.
+<br><br>
+
+A diferencia de otras redes sociales que te acercan a quien tienes lejos pero te alejan de aquellos que tienes cerca, esta red de intercambio te acerca a quien tienes cerca y ayuda a crear lazos entre familiares, vecinos o ciudadanos con los que tienes cosas en común.
+<br><br>
+La página cuenta con un gestor de préstamos donde tu puedes seleccionar el tiempo y las condiciones en las que deseas que se realice el préstamo. Y además te notificará cuando el préstamos se esté terminando para que tus objetos no se pierdan.
+<br><br>
+Esperemos que le saques mucho partido a la red, y recuerda que lo más importante es que tu generes tu lista de objetos para prestar.
+
+
+
+<h4><%= link_to '¿Eres nuevo? Regístrate.', new_libr_usuario_path %></h4>
+
+
+<h4><%= link_to '¿Eres habitual por aquí? Accede a tu cuenta.', login_path %></h4>
+
+
+
+	</div>
+
+
+
+
+
+</div>
+
+</body>

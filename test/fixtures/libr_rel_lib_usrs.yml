@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  libr_libro_id: 1
+  libr_usuario_id: 1
+  ubicacion: MyString
+  otro: MyString
+
+two:
+  libr_libro_id: 1
+  libr_usuario_id: 1
+  ubicacion: MyString
+  otro: MyString

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Libr Usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido1</th>
+      <th>Apellido2</th>
+      <th>Poblacion</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @libr_usuarios.each do |libr_usuario| %>
+      <tr>
+        <td><%= libr_usuario.Nombre %></td>
+        <td><%= libr_usuario.Apellido1 %></td>
+        <td><%= libr_usuario.Apellido2 %></td>
+        <td><%= libr_usuario.poblacion %></td>
+        <td><%= libr_usuario.email %></td>
+        <td><%= libr_usuario.password %></td>
+        <td><%= link_to 'Show', libr_usuario %></td>
+        <td><%= link_to 'Edit', edit_libr_usuario_path(libr_usuario) %></td>
+        <td><%= link_to 'Destroy', libr_usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Libr usuario', new_libr_usuario_path %>

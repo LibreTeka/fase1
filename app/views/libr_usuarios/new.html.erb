@@ -1,0 +1,64 @@
+
+<div id="cabecera">
+
+	<div id="cabsup">
+		<div id="logo">
+			<br>
+		<IMG SRC="logo.png" ALT="La primera biblioteca física p2p" WIDTH=300 HEIGHT=100% >
+
+		</div>
+
+		<div id="login">
+		<br>
+		<%= link_to 'Accede a tu cuenta', login_path %>
+		<%= link_to 'Regístrate', new_libr_usuario_path %>
+		</div>
+	</div>
+
+
+	<div id="menu">
+
+	 <ul>
+	    <li><%= link_to 'Inicio', root_path %></li>
+	    <li><%= link_to '¿Cómo funciona?', funcionamiento_path %></li>
+	    <li><%= link_to 'Preguntas Frecuentes', preguntas_path %></li>
+	    <li><%= link_to 'Nuestros principios', principios_path %></li>
+	    <li><%= link_to 'Contacto', contacto_path %></li>
+	 </ul>
+
+	</div>
+
+</div>
+
+
+
+
+<br>
+<br>
+<br>
+<div id="principal">
+
+	<div id="princip_izda">
+	<center>
+    <IMG SRC="/owl-158417.png" ALT="La primera biblioteca física p2p"
+     WIDTH=278 HEIGHT=100% ALIGN=middl>
+     </center>
+	</div>
+
+
+
+
+	<div id="princip_dcha">
+
+
+<h1>Nuevo Usuario</h1>
+
+<%= render 'form' %>
+
+	</div>
+
+</div>
+
+</body>
+
+

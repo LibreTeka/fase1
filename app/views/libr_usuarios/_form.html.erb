@@ -1,0 +1,51 @@
+<%= form_for(@libr_usuario) do |f| %>
+  <% if @libr_usuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@libr_usuario.errors.count, "error") %> prohibited this libr_usuario from being saved:</h2>
+
+      <ul>
+      <% @libr_usuario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :Nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :Apellido1 %><br>
+    <%= f.text_field :Apellido1 %>
+  </div>
+  <div class="field">
+    <%= f.label :Apellido2 %><br>
+    <%= f.text_field :Apellido2 %>
+  </div>
+  <div class="field">
+    <%= f.label :poblacion %><br>
+    <%= f.text_field :poblacion %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+    <div class="field">
+    <%= f.label :email_confirmation %><br>
+    <%= f.text_field :email_confirmation %>
+  </div>
+  <div class="field">
+    <%= f.label :password_digest %><br>
+    <%= f.text_field :password_digest %>
+  </div>
+    <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.text_field :password_confirmation %>
+  </div>
+
+
+  <div class="actions">
+      <%= f.submit "Registrarme" %>
+  </div>
+<% end %>
