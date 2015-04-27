@@ -4,14 +4,27 @@ Rails.application.routes.draw do
   resources :libr_usuarios
 
   resources :libr_libros
+    resources :sessions  
 
-  get 'login' => 'welcomee#login'
+  #get 'login' => 'welcomee#login'
   get 'funcionamiento' => 'welcomee#funcionamiento'
   get 'preguntas' => 'welcomee#preguntas'
   get 'principios' => 'welcomee#principios'
   get 'contacto' => 'welcomee#contacto'
 
-  get 'session' => 'session#index'
+
+
+
+  
+  get 'dentro' => 'sessions#index'
+  get 'login' => 'sessions#new'
+
+
+  
+
+
+
+
 
 
 
