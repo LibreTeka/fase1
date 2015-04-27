@@ -71,6 +71,8 @@ class LibrUsuariosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def libr_usuario_params
-      params.require(:libr_usuario).permit(:Nombre, :Apellido1, :Apellido2, :poblacion, :email, :email_confirmation, :password_digest, :password_confirmation)
+      params.require(:libr_usuario).permit(:Nombre, :Apellido1, :Apellido2, :poblacion, :email, :password, :password_confirmation)
     end
+
+    
 end

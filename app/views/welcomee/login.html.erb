@@ -54,7 +54,17 @@
 
 <h1>¿¿Otra vez tu por aquí??</h1>
 
-Por favor, indica tu usuario y contraseña:
+<%= form_tag session_path do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email] %>
+  </div>
+  <div class="field">
+    <%= label_tag :password_digest %>
+    <%= password_field_tag :password_digest %>
+  </div>
+  <div class="actions"><%= submit_tag "Log in" %></div>
+<% end %>
 
 	</div>
 

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'principios' => 'welcomee#principios'
   get 'contacto' => 'welcomee#contacto'
 
+  get 'session' => 'session#index'
+
 
 
 get 'cuentacreada' => 'libr_usuarios#cuentacreada'
