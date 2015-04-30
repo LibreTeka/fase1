@@ -19,6 +19,7 @@
 
 	<div id="menu">
 
+
 	 <ul>
 	    <li><%= link_to 'Inicio', root_path %></li>
 	    <li><%= link_to '¿Cómo funciona?', funcionamiento_path %></li>
@@ -50,14 +51,15 @@
 
 
 	<div id="princip_dcha">
+		<p id="notice"><%= notice %></p>
 
-<h1>Accede</h1>
-<br>
+		<h1>Accede</h1>
+		<br>
 
-<h4><%= link_to '¿Eres nuevo? Regístrate.', new_libr_usuario_path %></h4>
-<br>
+		<h4><%= link_to '¿Eres nuevo? Regístrate.', new_libr_usuario_path %></h4>
+		<br>
 
-<h4><%= link_to '¿Eres habitual por aquí? Accede a tu cuenta.', login_path %></h4>
+		<h4><%= link_to '¿Eres habitual por aquí? Accede a tu cuenta.', login_path %></h4>
 
 
 	</div>
