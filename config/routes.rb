@@ -16,13 +16,16 @@ Rails.application.routes.draw do
 
 
   
-  get 'dentro' => 'sessions#index'
+
   get 'login' => 'sessions#new'
   get "log_out" => "sessions#destroy", :as => "log_out"
 
+
+  get 'portada' => 'portada#inicio'
+  get 'contenido' => 'portada#contenido'
   
 
-
+  get 'Libronuevo' => 'sessions#CargarLibro'
 
 
 

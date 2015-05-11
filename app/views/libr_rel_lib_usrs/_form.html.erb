@@ -31,3 +31,46 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+
+<%= form_for(@libr_libro) do |f| %>
+  <% if @libr_libro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@libr_libro.errors.count, "error") %> prohibited this libr_libro from being saved:</h2>
+
+      <ul>
+      <% @libr_libro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :autor %><br>
+    <%= f.text_field :autor %>
+  </div>
+  <div class="field">
+    <%= f.label :editorial %><br>
+    <%= f.text_field :editorial %>
+  </div>
+  <div class="field">
+    <%= f.label :comentario %><br>
+    <%= f.text_field :comentario %>
+  </div>
+  <div class="field">
+    <%= f.label :otro1 %><br>
+    <%= f.text_field :otro1 %>
+  </div>
+  <div class="field">
+    <%= f.label :otro2 %><br>
+    <%= f.text_field :otro2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

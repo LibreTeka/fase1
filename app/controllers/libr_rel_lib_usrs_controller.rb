@@ -1,5 +1,6 @@
 class LibrRelLibUsrsController < ApplicationController
   before_action :set_libr_rel_lib_usr, only: [:show, :edit, :update, :destroy]
+  before_action :set_libr_libro
 
   # GET /libr_rel_lib_usrs
   # GET /libr_rel_lib_usrs.json
@@ -71,4 +72,16 @@ class LibrRelLibUsrsController < ApplicationController
     def libr_rel_lib_usr_params
       params.require(:libr_rel_lib_usr).permit(:libr_libro_id, :libr_usuario_id, :ubicacion, :otro)
     end
+
+    def set_libr_libro
+      @libr_libro = LibrLibro.all
+    end
+
+
+    def libros_por_usuario
+      relacionxusuario = LibrRelLibUsr.where(libr_usuario_id: @current_user.id)
+      @libroxusuario = LibrLibro.joins('inner join relacionxusuario on relacionxusuario.libr_libro_id')
+    end
+
+
 end

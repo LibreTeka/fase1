@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150427161923) do
+ActiveRecord::Schema.define(version: 20150508180001) do
 
   create_table "libr_libros", force: :cascade do |t|
     t.string   "titulo"
@@ -22,6 +22,19 @@ ActiveRecord::Schema.define(version: 20150427161923) do
     t.string   "otro2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "libr_rel_amigos", force: :cascade do |t|
+    t.integer  "libr_usuario_id"
+    t.string   "amigos_string"
+    t.integer  "amigo_integer"
+    t.string   "tipo_amistad1"
+    t.string   "tipo_amistad2"
+    t.string   "tipo_amistad3"
+    t.text     "otro1"
+    t.text     "otro2"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "libr_rel_lib_usrs", force: :cascade do |t|

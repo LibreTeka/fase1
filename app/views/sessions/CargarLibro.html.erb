@@ -1,0 +1,79 @@
+<body>
+	<div id="barraconfig">
+		
+		<div id="confizda">
+			<IMG SRC="/logo_inv.png" ALT="LibreTeca_Logo" WIDTH=200 HEIGHT=100% >
+		</div>
+
+		<div id="confdcha">
+			 <ul id="lin_confdcha">	
+			<%= link_to image_tag("/IcoUserSett.png", size: "35x35"), log_out_path %>
+			<%= link_to image_tag("/IcoBooksSett.png", size: "35x35"), log_out_path %>
+	        <%= link_to image_tag("/log_out2.png", size: "40x35"), log_out_path %>
+
+			 </ul>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div id="pagprincipal">
+
+		<h2>Bienvenido <%= current_user.Nombre %>.</h2>
+		<p id="notice"><%= notice %></p>
+
+
+
+
+<%= form_for(@alta_libro) do |f| %>
+
+
+  <div class="field">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :Nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :ubicacion %><br>
+    <%= f.text_field :ubicacion %>
+  </div>
+  
+
+
+  <div class="actions">
+      <%= f.submit "Registrarme" %>
+  </div>
+<% end %>
+
+
+
+
+		<table>
+		  <thead>
+		    <tr>
+		      <th>Nombre</th>
+		      <th>Apellido1</th>
+		      <th>Apellido2</th>
+		      <th>Poblacion</th>
+		      <th>Email</th>
+		      <th>Password</th>
+		      <th colspan="3"></th>
+		    </tr>
+		  </thead>
+
+		  <tbody>
+		      <tr>
+		        <td><%= current_user.Nombre %></td>
+		        <td><%= current_user.Apellido1 %></td>
+		        <td><%= current_user.Apellido2 %></td>
+		        <td><%= current_user.poblacion %></td>
+		        <td><%= current_user.email %></td>
+		        <td><%= current_user.password %></td>
+
+		      </tr>
+		  </tbody>
+		</table>
+
+		<br>

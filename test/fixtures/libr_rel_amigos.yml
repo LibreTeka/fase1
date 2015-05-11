@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  libr_usuario_id: 1
+  amigos_string: MyString
+  amigo_integer: 1
+  tipo_amistad1: MyString
+  tipo_amistad2: MyString
+  tipo_amistad3: MyString
+  otro1: MyText
+  otro2: MyText
+
+two:
+  libr_usuario_id: 1
+  amigos_string: MyString
+  amigo_integer: 1
+  tipo_amistad1: MyString
+  tipo_amistad2: MyString
+  tipo_amistad3: MyString
+  otro1: MyText
+  otro2: MyText
