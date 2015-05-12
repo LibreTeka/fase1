@@ -1,6 +1,7 @@
 class LibrUsuario < ActiveRecord::Base
 	has_secure_password
 	has_many :LibrRelLibUsrs, dependent: :destroy
+	has_one :LibrRelAmigos, dependent: :destroy
 	validates_presence_of :Nombre
 	validates_presence_of :email
 	validates_presence_of :password, :on => :create

@@ -1,3 +1,7 @@
 Tareas pendientes.
 
 1.-HECHO. Validaciones de contraseñas y correos a la hora de registrar un usuario nuevo. HECHO.
+
+2.- En el controlador de la portada "portada_controller.rb" se están incluyendo todas las funciones para ejecutar "before_action".
+Lo suyo sería que cada acción llamase a la función exclusivamente pasandole el parámetro del id_usuario. Sería mucho más sencillo y limpio,
+pero aún no sé como se hace.

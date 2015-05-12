@@ -48,8 +48,11 @@
 					      <th>Editorial</th>
 					      <th>Comentario</th>
 					      <th colspan="3"></th>
+					     
 					    </tr>
+					     <hr>
 					  </thead>
+
 
 					  <tbody>
 					    <% @libr_libros.each do |libr_libro| %>
@@ -67,35 +70,56 @@
 					  </tbody>
 					</table>
 
-
-
-
 					 <hr>
-			          Aquí va un listado con los libros que tienes dados de alta POR USUARIO. Y un botón para añadir nuevos libros.
+			          Falta un botón para añadir nuevos libros.
 					 <hr>
-
-
-
-
-
-
-
-
-
-
 		        </div>
 		    </div>
+
+
+
+
+
+
+
+
 		    <!-- pestaña 2-->
 		    <div class="tab">
 		        <input type="radio" id="tab-2" name="tab-group-1">
 		        <label for="tab-2"> Mis contactos</label>
 		        <div class="content">
 		            <!--contenido de la pestaña 2-->
-		            Aquí va un listado con los contactos.
-		             
+
+
+		            <%if @amigos == "Sin amigos"%>
+		            	 Aún no has añadido ningún amigo. Supongo que cuando cree la opción podrás hacerlo.
+		            <%else%>
+		            	
+		            <%=	render "amistades" %>
+		         	<%end %>
+
+
+
+			            
+
+
+
+
+
+
 		 
 		        </div>
 		    </div>
+
+
+
+
+
+
+
+
+
+
 		    <!-- pestaña 3-->
 		    <div class="tab">
 		        <input type="radio" id="tab-3" name="tab-group-1">
@@ -103,6 +127,9 @@
 		        <!--contenido de la pestaña 3-->
 		        <div class="content">
 		            Aquí va un formulario con las opciones de búsquedas y una tabla con los resultados a continuación.
+
+		            <%= render "kkk" %>
+
 
 		        </div>
 		    </div>
