@@ -78,10 +78,5 @@ class LibrRelLibUsrsController < ApplicationController
     end
 
 
-    def libros_por_usuario
-      relacionxusuario = LibrRelLibUsr.where(libr_usuario_id: @current_user.id)
-      @libroxusuario = LibrLibro.joins('inner join relacionxusuario on relacionxusuario.libr_libro_id')
-    end
-
 
 end

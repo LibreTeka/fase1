@@ -41,14 +41,13 @@
 		        <div class="content">
 
 
-		        <%= link_to 'Añadir libro nuevo',  libronuevo_path  %></td>
 
-		            <%if @libr_libros == "sinlibros"%>
-		            	 Aún no has añadido ningún item. Comparte, no seas rata.
-		            <%else%>
-		            	
-		            <%=	render "mislibros" %>
-		         	<%end %>
+					<h1>New Libr Libro</h1>
+
+					<%= render 'form_new_libro' %>
+
+					<%= link_to 'Back', portada_path %>
+
 
 
 
@@ -147,3 +146,6 @@
 		</table>
 
 		<br>
+
+
+

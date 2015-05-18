@@ -25,18 +25,19 @@ class LibrUsuariosController < ApplicationController
   # POST /libr_usuarios.json
   def create
     @libr_usuario = LibrUsuario.new(libr_usuario_params)
-    @amigos_usuario =
 
+    #respond_to do |format|
       if @libr_usuario.save
         redirect_to cuentacreada_path, :notice => "Dentro!!!"
+        #format.html { redirect_to @libr_usuario, notice: 'Libr usuario was successfully created.' }
+        #format.json { render :show, status: :created, location: @libr_usuario }
       else
         render "new"
+        #format.html { render :new }
+        #format.json { render json: @libr_usuario.errors, status: :unprocessable_entity }
       end
+    #end
   end
-
-
-
-
 
   # PATCH/PUT /libr_usuarios/1
   # PATCH/PUT /libr_usuarios/1.json

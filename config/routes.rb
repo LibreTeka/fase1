@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'libr_rel_amigos/new'
+
+  get 'libr_rel_amigos/create'
+
+  get 'libr_rel_amigos/destroy'
+
+  get 'libr_rel_amigos/update'
+
   resources :libr_rel_lib_usrs
 
   resources :libr_usuarios
@@ -25,7 +33,7 @@ Rails.application.routes.draw do
   get 'contenido' => 'portada#contenido'
   
 
-  get 'Libronuevo' => 'sessions#CargarLibro'
+  get 'libronuevo' => 'portada#libronuevo'
 
 
 
