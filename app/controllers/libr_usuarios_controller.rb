@@ -15,6 +15,7 @@ class LibrUsuariosController < ApplicationController
   # GET /libr_usuarios/new
   def new
     @libr_usuario = LibrUsuario.new
+    @libr_usuario.build_libr_rel_amigo
   end
 
   # GET /libr_usuarios/1/edit
@@ -25,7 +26,6 @@ class LibrUsuariosController < ApplicationController
   # POST /libr_usuarios.json
   def create
     @libr_usuario = LibrUsuario.new(libr_usuario_params)
-    @amigos_usuario =
 
       if @libr_usuario.save
         redirect_to cuentacreada_path, :notice => "Dentro!!!"
@@ -70,7 +70,7 @@ class LibrUsuariosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def libr_usuario_params
-      params.require(:libr_usuario).permit(:Nombre, :Apellido1, :Apellido2, :poblacion, :email, :password, :password_confirmation)
+      params.require(:libr_usuario).permit(:Nombre, :Apellido1, :Apellido2, :poblacion, :email, :password, :password_confirmation,libr_rel_amigo_attributes: [:amigos_string, :amigos_integer])
     end
 
     

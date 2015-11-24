@@ -33,13 +33,15 @@ before_action :set_libr_libro, :set_libr_rel_lib_usr, :show_amistades, :set_libr
      idusuario = current_user2.id
 
     amistades = LibrRelAmigo.find_by(id: idusuario)
-      amistades = amistades.amigos_string
-        if amistades
-          kk= "id in ( "+ amistades + ")"
+      misamigos = amistades.amigos_string
+        if misamigos
+          kk= "id in ( "+ misamigos + ")"
           @amigos = LibrUsuario.where(kk)
         else
           @amigos = "Sin amigos"
         end
+    rescue 
+      @amigos = "Sin amigos"
 
   end
 
