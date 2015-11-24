@@ -42,21 +42,6 @@
   </div>
 
 
-  <% if false %><%-#Inicio del comentario.-%>
-  Comentario. Este código se insertaba para que al crear una tabla de usuario se crease también
-  un registro en la tabla de amigos para el usuario recién creado. Se ha optado por ahora por 
-  controlar el error para que no pete al mostrar las amistades de un usuario que aún no tiene creada la tabla de libr_rel_amigos.
-
-   <%= f.fields_for :libr_rel_amigo do | libr_rel_amigo_fields | %>
-      <div class="fields">
-        <%= libr_rel_amigo_fields.label :amigo_integer, "¿Tienes amigos?" %><br>
-        <%= libr_rel_amigo_fields.text_field :amigo_integer %>
-      </div>
-    <% end %>
-   <% end  %><%-#fin comentario.-%>
-
-
-
 
   <div class="actions">
       <%= f.submit "Registrarme" %>
